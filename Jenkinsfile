@@ -35,13 +35,15 @@ stage ('Version and Upload') {
 
 node {
     if (didTimeout) {
+        currentBuild.displayName = "#${currentBuild.getNumber()} (no upload)"
         echo "No cookbook upload was triggered within timeout"
     } else if (userInput == true) {
         sh "chef exec thor version:bump ${versionPart}"
         def newVersion = readFile('VERSION')
         // that's where we want to bump the version and upload the cookbook
-        currentBuild.displayName = "${currentBuild.getNumber()} - ${newVersion} (${versionPart})"
+        currentBuild.displayName = "#${currentBuild.getNumber()} - ${newVersion} (${versionPart})"
     } else {
+        currentBuild.displayName = "#${currentBuild.getNumber()} (no upload)"
         echo "No cookbook upload was triggered within timeout"
     }
 }
