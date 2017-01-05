@@ -25,3 +25,5 @@ TODO move the relevant resources to the TYPO3 Chef CI Cookbook once we finished 
 
 * [System Wide tasks in Thor](http://stackoverflow.com/questions/41474735/use-global-thorfile)
 
+* [`git push` in Jenkinsfile](https://issues.jenkins-ci.org/browse/JENKINS-28335)
+
