@@ -40,7 +40,7 @@ node {
     } else if (userInput == true) {
         sh "chef exec thor version:bump ${versionPart}"
         def newVersion = readFile('VERSION')
-        // that's where we want to bump the version and upload the cookbook
+        // TODO implement cookbook upload here
         currentBuild.displayName = "#${currentBuild.getNumber()} - ${newVersion} (${versionPart})"
     } else {
         currentBuild.displayName = "#${currentBuild.getNumber()} (no upload)"
