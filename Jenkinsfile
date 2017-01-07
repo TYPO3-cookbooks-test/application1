@@ -1,10 +1,9 @@
 // Build a pipeline with custom steps:
 
-def pipelineBuilder = org.typo3.chefci.v2.Pipeline.builder(this, steps)
-pipelineBuilder.withHelloWorldStage()
-
-def pipeline = pipelineBuilder.build()
-pipeline.execute()
+org.typo3.chefci.v2.Pipeline.builder(this, steps)
+  .withHelloWorldStage()
+  .build()
+  .execute()
 
 
 // Build a default pipeline
