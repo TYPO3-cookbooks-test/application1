@@ -1,14 +1,5 @@
-// Build a pipeline with custom steps:
-
-/*
+@Library('chefci@v2-integration')
 org.typo3.chefci.v2.Pipeline.builder(this, steps)
-  .withHelloWorldStage()
+  .withIntegration()
   .build()
   .execute()
-*/
-
-// Build a default pipeline
-
-org.typo3.chefci.v2.Pipeline.builder(this, steps)
-	.buildDefaultPipeline()
-	.execute()
