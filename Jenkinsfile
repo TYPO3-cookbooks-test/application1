@@ -1,14 +1,5 @@
-// Build a pipeline with custom steps:
-
-/*
-org.typo3.chefci.v2.Pipeline.builder(this, steps)
-  .withHelloWorldStage()
-  .build()
-  .execute()
-*/
-
-// Build a default pipeline
-
+@Library('github.com/TYPO3-infrastructure/jenkins-pipeline-global-library-chefci@master')
+def dummy
 org.typo3.chefci.v2.Pipeline.builder(this, steps)
 	.buildDefaultPipeline()
 	.execute()
