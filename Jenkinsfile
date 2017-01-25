@@ -1,7 +1,8 @@
 stage('hello') {
   Map feedback = input(submitterParameter: 'submitter', message: "tell me something", parameters: [
-    [$class: 'TextParameterDefinition', name: 'test', description: "don't care"]
+    [$class: 'TextParameterDefinition', name: 'text', description: "don't care"]
   ])
 
-  echo feedback
+  echo "Text: ${feedback.text}"
+  echo "Submitter: ${feedback.submitter}"
 }
